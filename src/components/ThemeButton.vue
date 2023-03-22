@@ -17,7 +17,7 @@ function changeTheme() {
 }
 
 function applyTheme(themeName) {
-    document.querySelector('[title="theme"]').setAttribute('href', `/theme-${themeName}.scss`);
+    document.querySelector('[title="theme"]').setAttribute('href', `/theme-${themeName}.css`);
     document.querySelectorAll('.change__theme').forEach(button => {
         button.style.display = 'block';
     });
