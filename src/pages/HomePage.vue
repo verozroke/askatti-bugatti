@@ -5,34 +5,28 @@
         <Version/>
         <div class="blocker">
 
-			<!-- !Hardcoding here is a mistake. Give special component for it :D -->
-            <CardWrapper>
-				<!-- TODO: First component of Profile (w/ avatar, name and subtitle) | Button Lists | text and tg/ds links-->
-				
-				<!-- <Avatar/> -->
-				<!-- <UIButtonLink style="margin-bottom: 1em;"
-					v-for="button in socialMediaStore.buttons" 
-					:key="button.id" 
-					:name="button.name" 
-					:link="button.link"
-					:logoURL="button.logoURL"
-				/> -->
-			</CardWrapper>
+            <ProfileCard/>
         </div>
+		<!-- <UIButtonLink style="margin-bottom: 1em;"
+			v-for="button in socialMediaStore.buttons" 
+			:key="button.id" 
+			:name="button.name" 
+			:link="button.link"
+			:logoURL="button.logoURL"
+		/> -->
+		<!-- TODO: First component of Profile (w/ avatar, name and subtitle) | Button Lists | text and tg/ds links-->
 		<!-- TODO: Make Arrow Button to open second Component -->
 		<!-- TODO: Realize second component of description -->
     </div>
 </template>
 
 <script setup>
-import Avatar from '../components/Avatar.vue';
-import ClipboardWindow from '../components/ClipboardWindow.vue';
-import ThemeButton from '../components/ThemeButton.vue';
-import CardWrapper from '../components/UI/CardWrapper.vue';
-import UIButtonLink from '../components/UI/UIButtonLink.vue';
-import Version from '../components/Version.vue';
+import ClipboardWindow from '../components/entities/ClipboardWindow.vue';
+import ThemeButton from '../components/entities/ThemeButton.vue';
+import Version from '../components/entities/Version.vue';
 import { ref } from 'vue';
 import useSocialMediaStore from '../stores/SocialMediaStore'
+import ProfileCard from '../components/ProfileCard.vue';
 
 const socialMediaStore = useSocialMediaStore()
 
@@ -69,6 +63,8 @@ function parallax(e) {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
 .container {
 	width: 100vw;
 	height: 100vh;
@@ -85,6 +81,7 @@ function parallax(e) {
 	position: relative;
 	// object-fit: fill;
 }
+
 
 
 

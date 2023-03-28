@@ -11,6 +11,7 @@
 
 <style lang="scss">
 @import './styles/clearStyles.scss';
+@import './styles/fontStyles.scss';
 
 
 .wrapper {

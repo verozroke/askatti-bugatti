@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import  config from '../params'
+import  config from '../../params'
 </script>
 
 <style lang="scss" scoped>
