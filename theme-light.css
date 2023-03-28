@@ -13,22 +13,22 @@
     filter: drop-shadow(5em 3em 3em rgba(0, 0, 0, 0.33));
 }
 
-.card__subtitle {
+.profile__subtitle {
 	color: rgba(0, 0, 0, 0.8)
 }
 
-.card__pic {
+.profile__pic {
 	background-color: #fff;
 }
 
-.card__nickname {
+.profile__nickname {
 	color: rgba(0, 0, 0, 0.5);
 }
 
-.card__nickname:hover {
+.profile__nickname:hover {
 	color: rgba(0, 0, 0, 1);
 }
-.card__nickname::after {
+.profile__nickname::after {
 	background-color: rgba(0, 0, 0, 1);
 }
 

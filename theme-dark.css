@@ -17,17 +17,17 @@
 	background-color: #222222;
 }
 
-.card__nickname {
-	color:rgb(169, 169, 169);;
+.profile__nickname {
+	color:rgb(169, 169, 169);
 }
-.card__nickname::after {
+.profile__nickname::after {
 	background-color: rgba(255, 255, 255, 1);
 }
-.card__nickname:hover {
+.profile__nickname:hover {
 	color: rgba(255, 255, 255, 1);
 }
 
-.card__subtitle {
+.profile__subtitle {
 	color:rgb(169, 169, 169);
 }
 
