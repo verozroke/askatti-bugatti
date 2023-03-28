@@ -1,5 +1,5 @@
 const config = {
-    VERSION: '3.0 development'
+    VERSION: '3.1 development'
 }
 
 export default config 
