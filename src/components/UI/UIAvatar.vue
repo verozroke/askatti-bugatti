@@ -8,7 +8,7 @@
 
 <script setup>
 import { ref } from 'vue';
-const JSONData = `{"head":{"data":"/img/pfps/1.png","next":{"data":"/img/pfps/2.png","next":{"data":"/img/pfps/3.png","next":{"data":"/img/pfps/4.png","next":{"data":"/img/pfps/5.png","next":null}}}}}}`
+const JSONData = `{"head":{"data":"./img/pfps/1.png","next":{"data":"./img/pfps/2.png","next":{"data":"./img/pfps/3.png","next":{"data":"./img/pfps/4.png","next":{"data":"./img/pfps/5.png","next":null}}}}}}`
 const linkedList = JSON.parse(JSONData)
 const currentPicURL = ref(linkedList.head)
 const pic = ref(null)
