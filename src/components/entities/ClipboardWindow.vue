@@ -19,7 +19,7 @@ const isActiveRef = toRef(props, 'isActive')
 	font-weight: 300;
 	letter-spacing: 0.2px;
 	position: absolute;
-	z-index: 3;
+	z-index: 20;
 	top: -100px;
 	text-align: center;
 	color: #fff;

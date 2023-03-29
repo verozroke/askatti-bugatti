@@ -81,7 +81,7 @@
 	color:rgba(0, 0, 0, 0.33);
 }
 
-clipboard-icons__discord:hover {
+.clipboard-icons__discord:hover {
 	color: #000;
 	filter: brightness(.5);
 }
@@ -119,4 +119,11 @@ clipboard-icons__discord:hover {
 
 .change__theme[data-theme="light"] {
     display: none;
+}
+
+
+
+.element__line {
+	background-color: #222222;
+	
 }

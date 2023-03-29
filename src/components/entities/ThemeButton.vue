@@ -38,11 +38,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .theme {
-	position: fixed;
+	cursor: pointer;
 	width: 50px;
 	height: 50px;
-	top: 0;
-	right: 0;
 	padding: 1em;
 	margin: 1em;
 	border-radius: 50%;
@@ -50,14 +48,14 @@ onMounted(() => {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 1);
 	transition: .4s;
 	z-index: 3;
 }
 
 .theme:hover {
 	// background-color: #fff;
-	box-shadow: 0 0 0 rgba(0, 0, 0, 1);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 	transition: .4s;
 }
 

@@ -12,24 +12,39 @@ const JSONData = `{"head":{"data":"./img/pfps/1.png","next":{"data":"./img/pfps/
 const linkedList = JSON.parse(JSONData)
 const currentPicURL = ref(linkedList.head)
 const pic = ref(null)
+const hentaiMusic = new Audio('/audio/hentai.mp3')
 
-function changeAvatar() {
 
+let clicksToAva = 0
+const easterEgg = () => {
+    clicksToAva+= 1
+    console.log('Пасхалочка через: ' + (100-clicksToAva))
+    if (clicksToAva === 100) {
+        alert('Freestylooooo Time!~~~')
+        hentaiMusic.play()
+        clicksToAva = 0
+    }
+}
+
+
+const changeAvatar = () => {
     if(currentPicURL.value.next === null) {
         currentPicURL.value = linkedList.head
         return
     }
 
     currentPicURL.value = currentPicURL.value.next
-    return
-
+    easterEgg()
 }
+
+
 
 
 </script>
 
 <style lang="scss" scoped>
 .avatar {
+    cursor: pointer;
     width: 128px;
     height: 128px;
     background-color: #fff;

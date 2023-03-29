@@ -61,17 +61,17 @@
 }
 
 .btn-about img {
-	filter: invert(500%);
+	filter: invert(50%);
 }
 
 .btn-about.active img {
-	filter: invert(500%);
+	filter: invert(50%);
 }
 
 .block__about.active {
 	filter: drop-shadow(5em 3em 3em rgba(0, 0, 0, 0.33));
 }
-.profile.active {
+.profile-card.active {
 	filter: drop-shadow(1em 0.5em 0.5em rgba(0, 0, 0, 0.33));
 }
 
@@ -141,8 +141,7 @@
 .change__theme[data-theme="light"] {
     display: block;
 }
-.love {
-	background-color: #222222;
+.caption__title {
 	color: rgb(169, 169, 169)
 }
 

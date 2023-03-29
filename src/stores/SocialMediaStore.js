@@ -10,8 +10,8 @@ const useSocialMediaStore = defineStore('socialMediaStore', {
         ],
         // TODO: Realize clipping methods
         clippies: [
-            {id: 1, name: 'Discord', link: 'ASKATTRIONIS#8807', logoURL: '/img/icons/discord.png'},
-            {id: 2, name: 'Telegram', link: 'https://t.me/verozroker', logoURL: '/img/icons/telegram.png'},
+            {id: 1, name: 'Discord', link: 'ASKATTRIONIS#8807', logoURL: './img/icons/discord.png'},
+            {id: 2, name: 'Telegram', link: 'https://t.me/verozroker', logoURL: './img/icons/telegram.png'},
         ],
     })
 })

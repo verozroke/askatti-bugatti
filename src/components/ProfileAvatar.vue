@@ -33,7 +33,9 @@ import UIAvatar from './UI/UIAvatar.vue';
 		margin: 1em 0 0.5em 0;
 		letter-spacing: 0.25em;
 		// color: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
 		position: relative;
+		transition: 0.25s;
 		&::after {
 			content: '';
 			position: absolute;
