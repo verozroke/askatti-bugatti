@@ -4,11 +4,14 @@
         <Version/>
 		<div class="blocker" :class="{'active': isCardOpen}">
 			<ThemeButton class="theme"/>
-			<BookmarkButton @click="cardOpen" class="bookmark-button" :class="{'active': isCardOpen}"/>
-			<ProfileCard @clip="clip" class="profile-card" style="z-index: 3" :class="{'active': isCardOpen}"/>
-			<transition name="description">
-				<DescriptionCard v-if="isCardOpen" class="description-card"/>
+			<BookmarkButton v-if="!isMobile" @click="cardOpen" class="bookmark-button" :class="{'active': isCardOpen}"/>
+			<transition name="fade-profile">
+				<ProfileCard @clip="clip" class="profile-card" style="z-index: 3"  :class="{'active': isCardOpen}"/>
 			</transition>
+			<transition :name=" isMobile ? 'fade-description' : 'description'">
+				<DescriptionCard :is-mobile="isMobile" v-if="isCardOpen" class="description-card"/>
+			</transition>
+			<BookmarkButton class="switch-button" v-if="isMobile" :is-mobile="isMobile" @click="cardOpen"/>
 		</div>
     </div>
 </template>
@@ -23,6 +26,11 @@ import DescriptionCard from '../components/DescriptionCard.vue';
 import BookmarkButton from '../components/entities/BookmarkButton.vue';
 
 
+const isMobile = ref(false)
+
+if(window.screen.width < 450) {
+	isMobile.value = true
+}
 
 
 
@@ -45,15 +53,17 @@ const cardOpen = () => {
 
 const container = ref(null)
 const parallax = (e) => {
-	let _w = window.innerWidth/2;
-	let _h = window.innerHeight/2;
-	let _mouseX = e.clientX;
-	let _mouseY = e.clientY;
-	let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-        let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
-        let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-	container.value.style.backgroundPosition = x;
+	if(!isMobile.value) {
+		let _w = window.innerWidth/2;
+		let _h = window.innerHeight/2;
+		let _mouseX = e.clientX;
+		let _mouseY = e.clientY;
+		let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+			let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+			let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+			let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+		container.value.style.backgroundPosition = x;
+	}
 }
 
 </script>
@@ -72,7 +82,6 @@ const parallax = (e) => {
 
 .theme {
 	position: absolute;
-	z-index: 4;
 	top: -25px;
 	right: -25px;
 }
@@ -100,6 +109,16 @@ const parallax = (e) => {
 	top: 50%;
 	margin-top: -70px;
 	left: -35px;
+	&.active {
+		left: -50px;
+	}
+}
+
+.switch-button {
+	position: absolute;
+	bottom: -50px;
+	margin-left: -70px;
+	left: 50%;
 	&.active {
 		left: -50px;
 	}
@@ -143,7 +162,65 @@ const parallax = (e) => {
 	}
 }
 
+.fade-description {
+	&-enter-from {
+		opacity: 0;
+	}
+	&-enter-to {
+		opacity: 1;
+	}
+	&-enter-active {
+		transition: 1s;
+	}
+	&-leave-from {
+		opacity: 1;
+	}
+	&-leave-to {
+		opacity: 0;
+	}
+	&-leave-active {
+		transition: 1s;
+	}
+}
+
+.fade-profile {
+	&-enter-from {
+		opacity: 0;
+	}
+	&-enter-to {
+		opacity: 1;
+	}
+	&-enter-active {
+		transition: 1s;
+	}
+	&-leave-from {
+		opacity: 1;
+	}
+	&-leave-to {
+		opacity: 0;
+	}
+	&-leave-active {
+		transition: 1s;
+	}
+}
 
 
+@media only screen and (max-width: 450px) {
+	.profile-card {
+		filter: drop-shadow(.6em 0em .4em rgba(0, 0, 0, 0.33));
+	}
+	.description-card {
+		filter: drop-shadow(.6em 0em .4em rgba(0, 0, 0, 0.33));
+	}
+	.blocker.active {
+		transform: none;
+		transition: .4s;
+	}
+	.description-card {
+		position: absolute;
+		z-index: 4;
+		left: 0;
+	}
+}
 
 </style>

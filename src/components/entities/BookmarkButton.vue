@@ -1,8 +1,12 @@
 <template>
-    <button class="btn-about"><img src="/img/arrow-up.svg" alt=""></button>
+    <button :class="{'btn-about': !isMobile, 'btn-switch': isMobile}"><img :src="isMobile ? '/img/switch.svg' : '/img/arrow-up.svg' " alt=""></button>
 </template>
 
 <script setup>
+
+const props = defineProps({
+	isMobile: Boolean,
+})
 
 </script>
 
@@ -22,6 +26,25 @@
 	& img {
 		height: 16px;
 		width: 16px;
+		transition: .4s;
+	}
+}
+
+.btn-switch {
+	z-index: 10;
+	width: 10em;
+	height: 10em;
+	border-radius: 50%;
+	z-index: 1;
+	border-width: 1px;
+	border-style: solid;
+	// background: #fff;
+	transition: .4s;
+	font-size: 14px;
+	padding-top: 83px;
+	& img {
+		height: 24px;
+		width: 24px;
 		transition: .4s;
 	}
 }

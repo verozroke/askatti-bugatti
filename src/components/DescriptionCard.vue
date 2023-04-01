@@ -1,7 +1,7 @@
 <template>
     <CardWrapper>
                 <div class="block__container">
-                    <ul class="block__list">
+                    <ul class="block__list" :style="{'padding': isMobile ? '0 20px 0 20px' : '0 0 0 60px'}">
                         <li v-for="block in infoStore.blocks" :key="block.name" class="element">
                             <div class="element__title">
                                 {{ block.name }}:
@@ -22,6 +22,10 @@ import useInfoStore from '../stores/InfoStore';
 
 const infoStore = useInfoStore()
 
+const props = defineProps({
+	isMobile: Boolean
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -29,7 +33,7 @@ const infoStore = useInfoStore()
 
 
 .block__list {
-	padding: 0 0 0 60px;
+
 	list-style: none;
 	display: flex;
 	flex-direction: column;

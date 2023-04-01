@@ -127,3 +127,25 @@
 	background-color: #222222;
 	
 }
+.btn-switch {
+	background-color: #fff;
+}
+
+
+@media only screen and (max-width: 450px) {
+	.profile-card {
+		filter: drop-shadow(.6em 0em .4em rgba(0, 0, 0, 0.33));
+	}
+	.description-card {
+		filter: drop-shadow(.6em 0em .4em rgba(0, 0, 0, 0.33));
+	}
+	.blocker.active {
+		transform: none;
+		transition: .4s;
+	}
+	.description-card {
+		position: absolute;
+		z-index: 4;
+		left: 0;
+	}
+}
