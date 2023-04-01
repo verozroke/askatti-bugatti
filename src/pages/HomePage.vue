@@ -170,7 +170,7 @@ const parallax = (e) => {
 		opacity: 1;
 	}
 	&-enter-active {
-		transition: 1s;
+		transition: .4s;
 	}
 	&-leave-from {
 		opacity: 1;
@@ -179,7 +179,7 @@ const parallax = (e) => {
 		opacity: 0;
 	}
 	&-leave-active {
-		transition: 1s;
+		transition: .4s;
 	}
 }
 
@@ -191,7 +191,7 @@ const parallax = (e) => {
 		opacity: 1;
 	}
 	&-enter-active {
-		transition: 1s;
+		transition: .4s;
 	}
 	&-leave-from {
 		opacity: 1;
@@ -200,7 +200,7 @@ const parallax = (e) => {
 		opacity: 0;
 	}
 	&-leave-active {
-		transition: 1s;
+		transition: .4ss;
 	}
 }
 

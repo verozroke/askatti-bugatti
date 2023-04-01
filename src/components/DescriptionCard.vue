@@ -23,7 +23,7 @@ import useInfoStore from '../stores/InfoStore';
 const infoStore = useInfoStore()
 
 const props = defineProps({
-	isMobile: Boolean
+	isMobile: Boolean,
 })
 
 </script>
@@ -33,7 +33,7 @@ const props = defineProps({
 
 
 .block__list {
-
+	padding: 0 0 0 60px;
 	list-style: none;
 	display: flex;
 	flex-direction: column;
