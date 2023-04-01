@@ -10,7 +10,7 @@
                 <transition name="clipboard">
                     <div v-if="isLinksVisible" class="clipboard-icons">
                         <div v-if="isMobile" class="clipboard-icons__row">
-                            <a :href="socialMediaStore.clippies[0].link" class="clipboard-icons__discord">
+                            <a href="https://discordapp.com/users/505723504948412416" class="clipboard-icons__discord">
                                 <img :src="socialMediaStore.clippies[0].logoURL" alt="" id="discord">
                                 {{ socialMediaStore.clippies[0].name }}
                             </a>
