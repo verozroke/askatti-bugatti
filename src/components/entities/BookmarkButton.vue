@@ -1,5 +1,5 @@
 <template>
-    <button :class="{'btn-about': !isMobile, 'btn-switch': isMobile}"><img :src="isMobile ? '/img/switch.svg' : '/img/arrow-up.svg' " alt=""></button>
+    <button :class="{'btn-about': !isMobile, 'btn-switch': isMobile}"><img :src="link" alt=""></button>
 </template>
 
 <script setup>
@@ -7,6 +7,8 @@
 const props = defineProps({
 	isMobile: Boolean,
 })
+
+const link = props.isMobile ? '/img/switch.svg' : '/img/arrow-up.svg'
 
 </script>
 

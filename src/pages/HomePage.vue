@@ -6,7 +6,7 @@
 			<ThemeButton class="theme"/>
 			<BookmarkButton v-if="!isMobile" @click="cardOpen" class="bookmark-button" :class="{'active': isCardOpen}"/>
 			<transition name="fade-profile">
-				<ProfileCard @clip="clip" class="profile-card" style="z-index: 3"  :class="{'active': isCardOpen}"/>
+				<ProfileCard :is-mobile="isMobile" @clip="clip" class="profile-card" style="z-index: 3"  :class="{'active': isCardOpen}"/>
 			</transition>
 			<transition :name=" isMobile ? 'fade-description' : 'description'">
 				<DescriptionCard :is-mobile="isMobile" v-if="isCardOpen" class="description-card"/>

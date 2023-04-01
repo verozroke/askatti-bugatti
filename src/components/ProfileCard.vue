@@ -9,7 +9,17 @@
                 </transition>
                 <transition name="clipboard">
                     <div v-if="isLinksVisible" class="clipboard-icons">
-                        <div class="clipboard-icons__row">
+                        <div v-if="isMobile" class="clipboard-icons__row">
+                            <a :href="socialMediaStore.clippies[0].link" class="clipboard-icons__discord">
+                                <img :src="socialMediaStore.clippies[0].logoURL" alt="" id="discord">
+                                {{ socialMediaStore.clippies[0].name }}
+                            </a>
+                            <a :href="socialMediaStore.clippies[1].link" class="clipboard-icons__telegram">
+                                <img :src="socialMediaStore.clippies[1].logoURL" alt="" id="telegram">
+                                {{ socialMediaStore.clippies[1].name }}
+                            </a>                    
+                        </div>
+                        <div v-else class="clipboard-icons__row">
                             <div @click="$emit('clip', socialMediaStore.clippies[0].link)" class="clipboard-icons__discord">
                                 <img :src="socialMediaStore.clippies[0].logoURL" alt="" id="discord">
                                 {{ socialMediaStore.clippies[0].name }}
@@ -32,6 +42,11 @@ import ProfileNav from './ProfileNav.vue';
 import ProfileAvatar from './ProfileAvatar.vue';
 import useSocialMediaStore from '../stores/SocialMediaStore';
 import { ref } from 'vue';
+
+
+const props = defineProps({
+    isMobile: Boolean,
+})
 
 const socialMediaStore = useSocialMediaStore()
 
