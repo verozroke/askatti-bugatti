@@ -8,7 +8,7 @@ const props = defineProps({
 	isMobile: Boolean,
 })
 
-const link = props.isMobile ? '/img/switch.svg' : '/img/arrow-up.svg'
+const link = props.isMobile ? '/askatti-bugatti/img/switch.svg' : '/askatti-bugatti/img/arrow-up.svg'
 
 </script>
 

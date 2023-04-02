@@ -12,7 +12,7 @@ const JSONData = `{"head":{"data":"./img/pfps/1.png","next":{"data":"./img/pfps/
 const linkedList = JSON.parse(JSONData)
 const currentPicURL = ref(linkedList.head)
 const pic = ref(null)
-const hentaiMusic = new Audio('/audio/hentai.mp3')
+const hentaiMusic = new Audio('/askatti-bugatti/audio/hentai.mp3')
 
 
 let clicksToAva = 0
