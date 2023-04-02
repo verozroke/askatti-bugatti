@@ -190,5 +190,12 @@ askhat {
 		z-index: 4;
 		left: 0;
 	}
-}
+	.theme:hover {
+		background-color: #fff;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+	}
+	.theme:hover svg path {
+		fill: #222222;
+	}
 
+}
