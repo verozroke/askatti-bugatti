@@ -5,7 +5,7 @@
 			<ProfileNav/>
             <div @mouseenter="() => {isLinksVisible = true}" @mouseleave="() => {isLinksVisible = false}" class="caption">
                 <transition name="caption-title">
-                    <div v-if="!isLinksVisible" class="caption__title">love ellen <p class="r">{{ '<3' }}</p></div>
+                    <div v-if="!isLinksVisible" class="caption__title">love ellen<p class="r">{{ '<3' }}</p></div>
                 </transition>
                 <transition name="clipboard">
                     <div v-if="isLinksVisible" class="clipboard-icons">
@@ -183,6 +183,7 @@ const isLinksVisible = ref(false)
 .r {
     color: red;
     font-weight: 700;
+    margin-left: 10px;
 }
 
 

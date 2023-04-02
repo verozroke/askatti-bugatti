@@ -1,6 +1,6 @@
 <template>
     <div class="link">
-        <a :href="link" target="_blank"><img :src="logoURL" id="vk" alt="">{{ name }}</a>
+        <a :href="link" target="_blank"><img :src="logoURL" :id="name" alt="">{{ name }}</a>
     </div>
 </template>
 
@@ -56,5 +56,9 @@ const props = defineProps({
         height: 16px;
         margin: 0 0.5em 0 0;
     }
+}
+
+#GitHub {
+    margin: 0 .5em 3px 0;
 }
 </style>
