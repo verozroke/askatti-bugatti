@@ -131,7 +131,9 @@ const parallax = (e) => {
 }
 
 .profile-card {
+	transition: .4s;
 	&.active {
+		transition: .4s;
 		filter: drop-shadow(.6em 0.4em 0.4em rgba(0, 0, 0, 0.33));
 	}
 }
@@ -144,17 +146,21 @@ const parallax = (e) => {
 .description {
 	&-enter-from {
 		left: 0;
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.33));
 	}
 	&-enter-to {
 		left: 85%;
+		filter: drop-shadow(5em 3em 3em rgba(0, 0, 0, 0.33));
 	}
 	&-enter-active {
 		transition: .4s;
 	}
 	&-leave-from {
+		filter: drop-shadow(5em 3em 3em rgba(0, 0, 0, 0.33));
 		left: 85%;
 	}
 	&-leave-to {
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.33));
 		left: 0;
 	}
 	&-leave-active {
