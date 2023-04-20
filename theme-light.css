@@ -88,9 +88,27 @@
 }
 
 .clipboard-icons__telegram:hover {
-		color: #000;
-		filter: brightness(.5);
-	}
+	color: #000;
+	filter: brightness(.5);
+}
+
+.clipboard-icons__discord a {
+	color: #000 !important; 
+	filter: brightness(.5) !important;
+}
+.clipboard-icons__discord a:visited {
+	color: #000 !important;
+	filter: brightness(.5) !important;
+}
+.clipboard-icons__telegram a:visited {
+	color: #000 !important;
+	filter: brightness(.5) !important;
+}
+
+.clipboard-icons__telegram a {
+	color: #000 !important;
+	filter: brightness(.5) !important;
+}
 
 .message {
 	color: #fff;
