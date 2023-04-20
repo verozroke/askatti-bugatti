@@ -3,7 +3,7 @@
         <div class="profile">
 			<ProfileAvatar/>
 			<ProfileNav/>
-            <div @mouseenter="() => {isLinksVisible = true}" @mouseleave="() => {isLinksVisible = false}" class="caption">
+            <div @click="() => (isMobile ? isLinksVisible = !isLinksVisible : '')" @mouseenter="() => ( !isMobile ? isLinksVisible = true : '')" @mouseleave="() => ( !isMobile ? isLinksVisible = false : '')" class="caption">
                 <transition name="caption-title">
                     <div v-if="!isLinksVisible" class="caption__title">love ellen<p class="r">{{ '<3' }}</p></div>
                 </transition>
@@ -98,6 +98,7 @@ const isLinksVisible = ref(false)
 	margin: 17px 0 0 0;
 	justify-content: space-between;
 	align-items: center;
+	-webkit-tap-highlight-color: transparent; 
 	text-align: center;
 	height: 3.3em;
 	min-width: 20em; 

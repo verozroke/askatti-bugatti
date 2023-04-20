@@ -44,6 +44,7 @@ const changeAvatar = () => {
 
 <style lang="scss" scoped>
 .avatar {
+    -webkit-tap-highlight-color: transparent; 
     cursor: pointer;
     width: 128px;
     height: 128px;

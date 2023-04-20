@@ -18,10 +18,10 @@ function changeTheme() {
 
 function applyTheme(themeName) {
     document.querySelector('[title="theme"]').setAttribute('href', `/askatti-bugatti/theme-${themeName}.css`);
-    document.querySelectorAll('.change__theme').forEach(button => {
-        button.style.display = 'block';
-    });
-    document.querySelector(`[data-theme="${themeName}"]`).style.display = 'none';
+    // document.querySelectorAll('.change__theme').forEach(button => {
+    //     button.style.display = 'block';
+    // });
+    // document.querySelector(`[data-theme="${themeName}"]`).style.display = 'none';
     localStorage.setItem('theme', themeName);
 }
 
@@ -38,6 +38,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .theme {
+
+	-webkit-tap-highlight-color: transparent; 
 	cursor: pointer;
 	width: 50px;
 	height: 50px;

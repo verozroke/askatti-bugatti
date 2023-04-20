@@ -117,6 +117,7 @@ const parallax = (e) => {
 .switch-button {
 	position: absolute;
 	bottom: -50px;
+	-webkit-tap-highlight-color: transparent; 
 	margin-left: -70px;
 	left: 50%;
 	&.active {

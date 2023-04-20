@@ -95,6 +95,8 @@
 	filter: brightness(100%);
 }
 
+
+
 .clipboard-icons__discord:hover img {
 	filter: brightness(200%);
 
@@ -103,6 +105,18 @@
 		color: #fff;
 		filter: brightness(100%);
 }
+
+
+.clipboard-icons a {
+	color: rgb(169, 169, 169);
+	filter: brightness(100%);
+}
+
+.clipboard-icons a:visited {
+	color: rgb(169, 169, 169);
+	filter: brightness(100%);
+}
+
 .clipboard-icons__telegram:hover img {
 	filter: brightness(200%);
 }

@@ -17,6 +17,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .link {
+    -webkit-tap-highlight-color: transparent; 
     display: flex;
     justify-content: center;
     align-items: center;
